@@ -1,0 +1,3 @@
+C:/cpp/PIA1/PIA_terrain/cmake-build-debug/CMakeFiles/PIA_terrain.dir
+C:/cpp/PIA1/PIA_terrain/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/cpp/PIA1/PIA_terrain/cmake-build-debug/CMakeFiles/rebuild_cache.dir
