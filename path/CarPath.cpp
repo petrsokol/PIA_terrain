@@ -47,7 +47,7 @@ bool CarPath::find() {
             break; //jsme v cíli
         }
 
-        std::vector<Point> neighbours = getNeighbours(current, start, finish);
+        std::vector<Point> neighbours = getNeighbours(current);
         for (auto &item: neighbours) item.computeCosts(start, finish);
 
 //        std::cout << "neighbours of [" << current.x << ";" << current.y << "]: " << neighbours.size() << std::endl;
@@ -75,7 +75,7 @@ bool CarPath::find() {
     return true;
 }
 
-std::vector<Point> CarPath::getNeighbours(Point point, Point start, Point finish) {
+std::vector<Point> CarPath::getNeighbours(Point current) {
     std::vector<Point> res;
 
     for (int j = -1; j <= 1; ++j) {
@@ -85,10 +85,9 @@ std::vector<Point> CarPath::getNeighbours(Point point, Point start, Point finish
                 continue;
             }
 
-            if (map.validCoords(Point(point.x + i, point.y + j))) {
-                Point candidate(point.x + i, point.y + j);
-                double slope = fabs((map.alt(candidate) - map.alt(point)) / ((candidate - point).length() * 1000));
-
+            if (map.validCoords(Point(current.x + i, current.y + j))) {
+                Point candidate(current.x + i, current.y + j);
+                double slope = map.slope(current, candidate);
                 if (slope <= maxSlope && map.alt(candidate) >= 0) { //možná bude dělat problémy
                     candidate.computeCosts(start, finish);
                     res.push_back(candidate);

@@ -56,3 +56,6 @@ bool TerrainMap::validCoords(Point p) const {
     else return false;
 }
 
+double TerrainMap::slope(const Point &from, const Point &to) {
+    return fabs((alt(to) - alt(from)) / ((to - from).length() * 1000));
+}

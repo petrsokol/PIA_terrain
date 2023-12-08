@@ -13,4 +13,8 @@ add_executable(PIA_terrain main.cpp
         path/CarPath.h
         path/CarPath.cpp
         path/BoatPath.cpp
-        path/BoatPath.h)
+        path/BoatPath.h
+        path/SurfacePath.cpp
+        path/SurfacePath.h
+        path/TrainPath.cpp
+        path/TrainPath.h)

@@ -55,3 +55,19 @@ std::vector<Point> Path::retraceSteps(std::set<Point> closed) {
     std::reverse(res.begin(), res.end());
     return res;
 }
+
+std::vector<Point> Path::getNeighbours(Point current, bool conditions) {
+    std::vector<Point> res;
+    for (int j = -1; j <= 1; ++j) {
+        for (int i = -1; i <= 1; ++i) {
+            if (i == 0 && j == 0) {continue;}
+            if (map.validCoords(Point(current.x + i, current.y + j))) {
+                Point candidate(current.x + i, current.y + j);
+                if (conditions) { //možná bude dělat problémy
+                    res.push_back(candidate);
+                }
+            }
+        }
+    }
+    return res;
+}

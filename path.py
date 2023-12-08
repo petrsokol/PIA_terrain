@@ -20,7 +20,8 @@ ax.contour(terrain,[0])
 
 # Load and plot file path.dat
 
-path = np.loadtxt("cmake-build-debug/boat.dat")
+path = np.loadtxt("cmake-build-debug/all-terrain.dat")
+
 
 start = path[0]
 target = path[-1]

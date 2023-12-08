@@ -33,13 +33,24 @@ private:
 class TerrainMap {
 
 public:
-    TerrainMap(int n, int m);                       // Creates a zero altitude matrix with dimensions n x m
-    TerrainMap(int n, int m, const std::string& filename); // Creates a matrix with dimensions n x m and loads altitude data from file (by rows)
-    int alt(int x, int y);                          // Return altitude data for specific coordinates
-    int alt(Point const& v);
-    void outputStats();                             // Report access statistics to std. output
-    bool validCoords(Point p) const;                // Verify that the given coordinates are within bounds
+    // Attributes
     const int nx; const int ny;
+
+    // Constructor
+    TerrainMap(int n, int m);                       // Creates a zero altitude matrix with dimensions n x m
+
+    TerrainMap(int n, int m, const std::string& filename); // Creates a matrix with dimensions n x m and loads altitude data from file (by rows)
+
+    // Methods
+    int alt(int x, int y);                          // Return altitude data for specific coordinates
+
+    int alt(Point const& v);
+
+    double slope(const Point &from, const Point &to); // Return slope between two points (used for neighbours)
+
+    void outputStats();                             // Report access statistics to std. output
+
+    bool validCoords(Point p) const;                // Verify that the given coordinates are within bounds
 private:
     Matrix<int> altitude;
     Matrix<int> access_count;

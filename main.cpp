@@ -3,6 +3,8 @@
 #include "structures/Point.h"
 #include "path/CarPath.h"
 #include "path/BoatPath.h"
+#include "path/TrainPath.h"
+#include "path/SurfacePath.h"
 #include <vector>
 #include <iostream>
 #include <string>
@@ -31,7 +33,9 @@ int main() {
     std::vector<Path*> paths = { //new YourPath(m,"MyPathName",start,finish), ...
         // Here add the list of dynamically created classes with path finding algorithms
         new CarPath(m, "car", start, finish),
-        new BoatPath(m, "boat", start, finish)
+        new BoatPath(m, "boat", start, finish),
+        new TrainPath(m, "train", start, finish),
+        new SurfacePath(m, "all-terrain", start, finish)
     };
 
     for (auto& p : paths) {

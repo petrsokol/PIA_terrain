@@ -23,6 +23,8 @@ public:
 
     std::vector<Point> retraceSteps(std::set<Point> closed);
 
+    std::vector<Point> getNeighbours(Point current, bool conditions);
+
     std::string getName() const; // Returns path name
 
 protected:

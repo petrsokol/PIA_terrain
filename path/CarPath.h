@@ -22,7 +22,7 @@ public:
     bool find() override;
 
     // Methods
-    std::vector<Point> getNeighbours(Point point, Point start, Point finish);
+    std::vector<Point> getNeighbours(Point current);
 
 };
 

@@ -91,6 +91,18 @@ build CMakeFiles/PIA_terrain.dir/path/BoatPath.cpp.obj: CXX_COMPILER__PIA_terrai
   OBJECT_DIR = CMakeFiles\PIA_terrain.dir
   OBJECT_FILE_DIR = CMakeFiles\PIA_terrain.dir\path
 
+build CMakeFiles/PIA_terrain.dir/path/SurfacePath.cpp.obj: CXX_COMPILER__PIA_terrain_unscanned_Debug C$:/cpp/PIA1/PIA_terrain/path/SurfacePath.cpp || cmake_object_order_depends_target_PIA_terrain
+  DEP_FILE = CMakeFiles\PIA_terrain.dir\path\SurfacePath.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\PIA_terrain.dir
+  OBJECT_FILE_DIR = CMakeFiles\PIA_terrain.dir\path
+
+build CMakeFiles/PIA_terrain.dir/path/TrainPath.cpp.obj: CXX_COMPILER__PIA_terrain_unscanned_Debug C$:/cpp/PIA1/PIA_terrain/path/TrainPath.cpp || cmake_object_order_depends_target_PIA_terrain
+  DEP_FILE = CMakeFiles\PIA_terrain.dir\path\TrainPath.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\PIA_terrain.dir
+  OBJECT_FILE_DIR = CMakeFiles\PIA_terrain.dir\path
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PIA_terrain
@@ -99,7 +111,7 @@ build CMakeFiles/PIA_terrain.dir/path/BoatPath.cpp.obj: CXX_COMPILER__PIA_terrai
 #############################################
 # Link the executable PIA_terrain.exe
 
-build PIA_terrain.exe: CXX_EXECUTABLE_LINKER__PIA_terrain_Debug CMakeFiles/PIA_terrain.dir/main.cpp.obj CMakeFiles/PIA_terrain.dir/path/Path.cpp.obj CMakeFiles/PIA_terrain.dir/structures/TerrainMap.cpp.obj CMakeFiles/PIA_terrain.dir/structures/Point.cpp.obj CMakeFiles/PIA_terrain.dir/path/PlanePath.cpp.obj CMakeFiles/PIA_terrain.dir/path/CarPath.cpp.obj CMakeFiles/PIA_terrain.dir/path/BoatPath.cpp.obj
+build PIA_terrain.exe: CXX_EXECUTABLE_LINKER__PIA_terrain_Debug CMakeFiles/PIA_terrain.dir/main.cpp.obj CMakeFiles/PIA_terrain.dir/path/Path.cpp.obj CMakeFiles/PIA_terrain.dir/structures/TerrainMap.cpp.obj CMakeFiles/PIA_terrain.dir/structures/Point.cpp.obj CMakeFiles/PIA_terrain.dir/path/PlanePath.cpp.obj CMakeFiles/PIA_terrain.dir/path/CarPath.cpp.obj CMakeFiles/PIA_terrain.dir/path/BoatPath.cpp.obj CMakeFiles/PIA_terrain.dir/path/SurfacePath.cpp.obj CMakeFiles/PIA_terrain.dir/path/TrainPath.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\PIA_terrain.dir
